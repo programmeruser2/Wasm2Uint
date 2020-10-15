@@ -1,5 +1,5 @@
 const outputArea = document.getElementById('output');
-const fileURLInput = document.getElementById('wasm-file-url);
+const fileURLInput = document.getElementById('wasm-file-url');
 
 async function wasmFromURL() {
   const result = await convertWasmFromURL(fileURLInput.value);
