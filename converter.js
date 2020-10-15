@@ -5,7 +5,7 @@ async function wasmFromURL() {
   const url = fileURLInput.value;
   if(url.trim()) {
     const result = await convertWasmFromURLToUint(url);
-    outputArea.value = result;
+    outputArea.value = `var wasmCode = new Uint8Array([${result}])`;
   }
 }
 async function convertWasmFromURLToUint(url) {
