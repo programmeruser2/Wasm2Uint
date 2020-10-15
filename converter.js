@@ -1,5 +1,16 @@
 const outputArea = document.getElementById('output');
 const fileURLInput = document.getElementById('wasm-file-url');
+const fileInput = document.getElementById('wasm-file-upload');
+
+fileInput.onchange = function(event) {
+	const fileReader = new FileReader();
+	let result;
+	fileReader.onload = function() {
+		result = new Uint8Array(fileReader.result)
+		outputArea.value = `var wasmCode = new Uint8Array([${result}])`;
+	}
+	fileReader.readAsArrayBuffer(this.files[0]);
+}
 
 async function wasmFromURL() {
   const url = fileURLInput.value;
