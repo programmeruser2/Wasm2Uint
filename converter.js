@@ -7,7 +7,7 @@ fileInput.onchange = function(event) {
 	let result;
 	fileReader.onload = function() {
 		result = new Uint8Array(fileReader.result)
-		outputArea.value = `var wasmCode = new Uint8Array([${result}])`;
+		outputArea.value = `var wasmCode = new Uint8Array([${result}]);`;
 	}
 	fileReader.readAsArrayBuffer(this.files[0]);
 }
