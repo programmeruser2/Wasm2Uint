@@ -1,6 +1,5 @@
-async function convertWasmFromURL(url) {
-  const req = await fetch(url);
-  const wasmArrayBuffer = await req.arrayBuffer();
-  const result = await new Uint8Array(wasmArrayBuffer);
-  await return result;
+function convertWasmFromURL(url) {
+  fetch(url)
+  .then(response => response.arrayBuffer())
+  .then(bytes => return new Uint8Array(bytes));
 }
