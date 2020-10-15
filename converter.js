@@ -6,7 +6,7 @@ async function wasmFromURL() {
   if (url.trim()) {
     const result = await convertWasmFromURLToUint(url);
 		if(result) {
-    	outputArea.value = `var wasmCode = new Uint8Array([${result}])`;
+    	outputArea.value = `var wasmCode = new Uint8Array([${result}]);`;
 		}
   }
 }
