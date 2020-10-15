@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <script src="converter.js" defer></script>
-<input type="text" id="wasm-file-url" placeholder="URL" autocomplete="off" spellcheck="false"/> <br>
-<input type="button" onclick="wasmFromURL()"/ value="Convert to Uint8Array"> <br>
-<input id="wasm-file-upload" type="file"/>
+<div id="url-input">
+	<label for="wasm-file-url">Enter the link:</label> <br>
+	<input type="text" id="wasm-file-url" placeholder="URL" autocomplete="off" spellcheck="false"/> <br>
+	<input type="button" onclick="wasmFromURL()"/ value="Convert to Uint8Array"> <br>
+</div>
+<br>
+<div id="file-input">
+	<label for="wasm-file-upload">Or upload a file:<label> <br>
+	<input id="wasm-file-upload" type="file"/> <br>
+<div>
 <textarea id="output" rows="10" cols="50" spellcheck="false"></textarea>
