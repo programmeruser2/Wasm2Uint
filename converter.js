@@ -1,4 +1,4 @@
-function convertWasmFromURL(url) {
+function convertWasmFromURLToUint(url) {
   let result;
   fetch(url)
   .then(response => response.arrayBuffer())
