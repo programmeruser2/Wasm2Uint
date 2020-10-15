@@ -9,7 +9,7 @@ async function wasmFromURL() {
   }
 }
 async function convertWasmFromURLToUint(url) {
-  const req = await fetch('https://cors-anywhere.herokuapp.com/'url);
+  const req = await fetch('https://cors-anywhere.herokuapp.com/'+url);
   const bytes = await req.arrayBuffer();
   return new Uint8Array(bytes);
 }
