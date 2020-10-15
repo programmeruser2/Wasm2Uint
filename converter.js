@@ -3,7 +3,7 @@ const fileURLInput = document.getElementById('wasm-file-url');
 
 async function wasmFromURL() {
   const url = fileURLInput.value;
-  if(url) {
+  if(url.trim()) {
     const result = await convertWasmFromURLToUint(url);
     outputArea.value = result;
   }
