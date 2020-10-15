@@ -2,7 +2,7 @@ const outputArea = document.getElementById('output');
 const fileURLInput = document.getElementById('wasm-file-url');
 const fileInput = document.getElementById('wasm-file-upload');
 
-function wasmFromFile() {
+fileInput.onchange = function(event) {
 	const fileReader = new FileReader();
 	let result;
 	fileReader.onload = function() {
