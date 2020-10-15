@@ -1,6 +1,5 @@
-function convertWasmFromURLToUint(url) {
-  let result;
-  return fetch(url)
-  .then(response => response.arrayBuffer())
-  .then(bytes => {return new Uint8Array(response)})
+async function convertWasmFromURLToUint(url) {
+  const req = fetch(url);
+  const bytes = await req.arrayBuffer();
+  return new Uint8Array(bytes);
 }
