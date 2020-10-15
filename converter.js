@@ -2,8 +2,11 @@ const outputArea = document.getElementById('output');
 const fileURLInput = document.getElementById('wasm-file-url');
 
 async function wasmFromURL() {
-  const result = await convertWasmFromURLToUint(fileURLInput.value);
-  outputArea.value = result;
+  const url = fileURLInput.value;
+  if(url) {
+    const result = await convertWasmFromURLToUint(url);
+    outputArea.value = result;
+  }
 }
 async function convertWasmFromURLToUint(url) {
   const req = await fetch(url);
