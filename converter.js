@@ -9,7 +9,7 @@ fileInput.onchange = function(event) {
     result = new Uint8Array(fileReader.result)
     outputArea.value = `var wasmCode = new Uint8Array([${result}])`;
   }
-  fileReader.readAsArrayBuffer(this.files[0);
+  fileReader.readAsArrayBuffer(this.files[0]);
 }
 async function wasmFromURL() {
   const url = fileURLInput.value;
