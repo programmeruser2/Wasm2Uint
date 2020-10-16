@@ -9,18 +9,18 @@ fileInput.onchange = function(event) {
     result = new Uint8Array(fileReader.result)
     outputArea.value = `var wasmCode = new Uint8Array([${result}])`;
   }
-  fileReader.readAsArrayBuffer(this.files[0]);
+  fileReader.readAsArrayBuffer(this.files[0);
 }
-
 async function wasmFromURL() {
   const url = fileURLInput.value;
   if (url.trim()) {
     const result = await convertWasmFromURLToUint(url);
     if(result) {
     	outputArea.value = `var wasmCode = new Uint8Array([${result}]);`;
-      }
+    }
   }
 }
+
 async function convertWasmFromURLToUint(url) {
   const res = await fetch('https://cors-anywhere.herokuapp.com/'+url);
   if (
